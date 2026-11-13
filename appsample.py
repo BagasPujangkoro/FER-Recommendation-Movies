@@ -47,6 +47,9 @@ if camera_image is not None:
     np_arr = np.frombuffer(bytes_data, np.uint8)
     frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
 
+    # Balikkan gambar secara horizontal (1) agar tidak mirror / tidak terbalik
+    frame = cv2.flip(frame, 1)
+
     with st.spinner("Menganalisis ekspresi wajah responden..."):
         try:
             # 1. Cek tingkat kecerahan (Grayscale)
