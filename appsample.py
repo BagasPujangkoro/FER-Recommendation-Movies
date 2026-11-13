@@ -45,10 +45,7 @@ camera_image = st.camera_input("Silahkan ambil foto wajah Anda")
 if camera_image is not None:
     bytes_data = camera_image.getvalue()
     np_arr = np.frombuffer(bytes_data, np.uint8)
-    frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-
-    # Balikkan gambar secara horizontal (1) agar tidak mirror / tidak terbalik
-    frame = cv2.flip(frame, 1)
+    frame = cv2.imdecode(np_arr, np.IMREAD_COLOR)
 
     with st.spinner("Menganalisis ekspresi wajah responden..."):
         try:
