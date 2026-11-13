@@ -29,7 +29,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.markdown(
-    '<p class="sub-header">Program Studi Teknologi Informasi - Universitas Gadjah Mada</p>',
+    '<p class="sub-header">BAGAS PUJANGKORO Program Studi Teknologi Informasi - Universitas Gadjah Mada</p>',
     unsafe_allow_html=True,
 )
 st.divider()
